@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    string mantra;
+    int jumlah = 0;
+
+    cout << "Mantra: ";
+    getline(cin, mantra);
+
+    for (int i = 0; i < mantra.length(); i++) {
+        if (tolower(mantra[i]) == 'a' || tolower(mantra[i]) == 'e' || 
+            tolower(mantra[i]) == 'i' || tolower(mantra[i]) == 'o' || tolower(mantra[i]) == 'u') 
+            jumlah++;
+    }
+
+    if (jumlah > 0) {
+        cout << "Kekuatan mantra: " << jumlah << " vokal." << endl;
+    } else {
+        cout << "Mantra tidak valid! Tidak mengandung vokal." << endl;
+    }
+
+    return 0;
+}
