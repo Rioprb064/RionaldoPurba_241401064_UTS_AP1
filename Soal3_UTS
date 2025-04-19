@@ -1,0 +1,28 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    string nama,nim;
+    int alpro,pds,os;
+    float rata;
+
+    cout<<"Nama Mahasiswa : ";
+    cin>>nama;
+    cout<<"NIM : ";
+    cin>>nim;
+    cout<<"Nama Mata Kuliah : "<<endl;
+    cout<<"Algoritma dan Pemrograman : ";
+    cin>>alpro;
+    cout<<"Probabilitas dan statistika : ";
+    cin>>pds;
+    cout<<"Sistem Operasi : ";
+    cin>>os; 
+    
+    cout<<"Algoritma dan Pemrograman: "<<(alpro>=60 ? "Lulus." : "Tidak Lulus. Silakan Ulangi di Tahun Depan!")<<endl;
+    cout<<"Probabilitas dan Statistika: "<<(pds>=60 ? "Lulus." : "Tidak Lulus. Silakan Ulangi di Tahun Depan!")<<endl;
+    cout<<"Sistem Informasi: "<<(os>=60 ? "Lulus." : "Tidak Lulus. Silakan Ulangi di Tahun Depan!")<<endl;
+    
+    rata=((float)(alpro+pds+os))/(float)3;
+    cout<<fixed<<setprecision(0)<<"Nilai Rata-Rata Semester ini: "<<rata<<endl;
+}
